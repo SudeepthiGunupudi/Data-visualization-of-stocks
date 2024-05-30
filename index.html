@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Jobs Viewer</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('YOUR_API_GATEWAY_URL/read-cron')  // Replace with your API Gateway URL
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        document.getElementById('cron-content').textContent = data.data;
+                    } else {
+                        document.getElementById('cron-content').textContent = 'Error: ' + data.message;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('cron-content').textContent = 'Error fetching cron jobs';
+                });
+        });
+    </script>
+</head>
+<body>
+    <h1>Cron Jobs</h1>
+    <pre id="cron-content">Loading...</pre>
+</body>
+</html>
