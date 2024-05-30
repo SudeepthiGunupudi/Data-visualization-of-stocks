@@ -6,7 +6,7 @@ https://crontab.guru/
 
 #Unix commands:
 
-'''
+'''sh
 
 #Command to connect to EC2 serever from the Command Prompt:
 ssh -i project123.pem ec2-user@ipaddress
