@@ -6,7 +6,7 @@ https://crontab.guru/
 
 #Unix commands:
 
-'''sh
+```sh
 
 #Command to connect to EC2 serever from the Command Prompt:
 ssh -i project123.pem ec2-user@ipaddress
@@ -25,7 +25,7 @@ vim bank_stock_data.cron
 crontab -l  # listing cron jobs
 crontab bank_stock_data.cron  #adding cron jobs
 
-'''
+```
 
 Step 1 : 
 gather_data.py will collect the data from IEX Cloud. Plot the graphs and upload the data to S3 bucket.
